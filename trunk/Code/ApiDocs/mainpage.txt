@@ -1,0 +1,66 @@
+/**
+@mainpage MATLAB Scripting Extension for Opticks
+
+\section overview Overview
+The MATLAB Scripting Extension for Opticks provides access to Opticks data and functionality through a defined set of MATLAB commands.
+This interface supports interaction with data loaded in Opticks through both the MATLAB command line and MATLAB scripts.
+Additionally, the MATLAB Interface provides functions to view and modify metadata, manipulate layers, and adjust some visualization parameters.
+The interface is accessed through the scripting window in Opticks, which accepts MATLAB commands and displays MATLAB output in the same manner as the command line interface in the MATLAB Command Window.
+The MATLAB Interface also supports batch processing through the Opticks Wizard functionality.
+This capability allows users to run Opticks plug-ins from MATLAB and run MATLAB scripts from Opticks.
+MATLAB commands can be run from a wizard by adding the <tt>Run Interpreter Commands</tt> desktop wizard item to a wizard and passing "MATLAB" as the interpreter name and the MATLAB code as a string.
+
+The MATLAB Scripting Extension for Opticks is designed to provide a mechanism for rapidly prototyping new algorithms in MATLAB while leveraging Opticks functionality.
+This interface supports seamlessly executing proven R&D MATLAB algorithms via Opticks while awaiting formal software implementation.
+It can also be useful for validating Opticks implementations of algorithms against MATLAB counterparts.
+Introductory material on MATLAB use is beyond the scope of this document which assumes at least a basic familiarity with the MATLAB language.
+
+Please note that the MATLAB Scripting Extension for Opticks can only be used with a licensed copy of MATLAB software.
+The MATLAB Scripting Extension for Opticks is not produced by The MathWorks, Inc., creators of MATLAB.
+
+\section support Supported Versions
+<table>
+<tr>
+<td><b>MATLAB Version</b></td><td><b>32-bit Windows Support</b></td><td><b>64-bit Windows Support</b></td>
+</tr>
+<tr><td>R2006a</td><td>No</td><td>No</td></tr>
+<tr><td>R2006b</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>R2007a</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>R2007b</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>R2008a</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>R2008b</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>R2009a</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>R2009b</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>R2009bSP1</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>R2010a</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>R2010b</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>R2010bSP1</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>R2011a</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>R2011b</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>R2012a</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>R2012b</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>R2013a</td><td>Yes</td><td>Yes</td></tr>
+</table>
+
+\section setup Setup
+The <tt>Scripting/MATLAB Interpreter</tt> options page contains several optional configuration settings.
+
+By default, <tt>Automatic Configuration</tt> will automatically detect MATLAB and choose the appropriate settings.
+If <tt>Automatic Configuration</tt> cannot detect MATLAB, <tt>Manual Configuration</tt> must be used to configure this extension.
+The <tt>MATLAB Installation Location</tt> option locates the MATLAB installation directory.
+Browse to and select the <tt>libeng.dll</tt> file in the MATLAB installation directory.
+It usually resides in the <tt>bin/win32</tt> or <tt>bin/win64</tt> subdirectory.
+The <tt>MATLAB Version</tt> selection allows the user to select the version of MATLAB which was selected in the <tt>MATLAB Installation Location</tt> option.
+
+The <tt>Output Buffer Size</tt> option allows the user to configure the amount of memory shared between MATLAB and Opticks for purposes of output and error messages.
+If this size is too small, certain commands will display an error message indicating that the size of this buffer should be increased.
+
+The <tt>Automatically Check for Errors</tt> option allows the user to set whether the MATLAB interpreter queries the MATLAB engine for errors.
+If this is checked, then the MATLAB Scripting Extension for Opticks will run the <tt>lasterror</tt> command after each command and attempt to determine if an error occurred during processing.
+
+The <tt>Automatically Clear Errors</tt> option allows the user to set whether the MATLAB interpreter clears the MATLAB engine's most recent error.
+If this is checked, then the MATLAB Scripting Extension for Opticks will run the <tt>lasterror('reset')</tt> command after each command to clear any errors caused by the command.
+
+\section commands Commands
+To display the list of MATLAB commands which are specific to Opticks, execute the command <tt>opticks</tt> in the Opticks Scripting Window or via the <tt>Run Interpreter Commands</tt> Wizard Item.
+*/
