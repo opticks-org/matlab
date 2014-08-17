@@ -13,7 +13,7 @@
 #define MATLAB_NAME "MATLAB"
 #define MATLAB_NAME_LONG "MATLAB interpreter extension."
 #define MATLAB_COPYRIGHT "Copyright © 2013, Ball Aerospace & Technologies Corp."
-#define MATLAB_VERSION_NUMBER "1.8Unofficial"
+#define MATLAB_VERSION_NUMBER "1.9.0rc1"
 #define MATLAB_IS_PRODUCTION_RELEASE false
 
 #endif
